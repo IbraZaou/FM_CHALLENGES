@@ -1,0 +1,162 @@
+/* FONT */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Quicksand&display=swap');
+
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #F3EAE3;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Quicksand', sans-serif;
+}
+
+/* WRAPPER */
+
+.wrapper {
+    display: flex;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    overflow: hidden;
+    margin-bottom: 3rem;
+}
+
+/* IMAGE SIDE */
+
+img {
+    width: 40%;
+    border-radius: 20px 0 0 20px;
+    height: 100%;
+}
+
+/* CONTAINER INFO */
+
+.container_info {
+    flex-direction: column;
+    display: flex;
+    width: 30%;
+    margin: 0;
+    padding: 2rem;
+    border-radius: 0 20px 20px 0;
+    height: 90%;
+    background-color: white;
+}
+
+.container_info p:nth-child(1) {
+    letter-spacing: .5rem;
+    color: gray;
+    text-transform: uppercase;
+}
+
+.container_info p:nth-child(2) {
+    font-size: 3rem;
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+}
+
+
+.container_info p:nth-child(3) {
+    line-height: 2rem;
+    font-size: 1.3rem;
+}
+
+.prices {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin-bottom: 2.5rem;
+}
+
+.prices span:nth-child(1) {
+    color: #3D8168;
+    font-size: 3rem;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+}
+
+.prices span:nth-child(2) {
+    text-decoration: line-through;
+    color: gray;
+}
+
+
+/* BUTTON */
+
+button {
+    background-color: #3D8168;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    padding: 1rem .5rem;
+    transition: .3s;
+    cursor: pointer;
+    font-size: 1.3rem;
+}
+
+button:hover {
+    background: #2d5d4c;
+    transition: .3s;
+}
+
+button i {
+    margin-right: 5%;
+}
+
+
+/* MEDIA QUERY */
+
+@media screen and (max-width: 430px) {
+
+    .wrapper {
+        flex-direction: column;
+        width: 95%;
+        height: 80%;
+    }
+
+
+    img {
+        width: 100%;
+        border-radius: 20px 20px 0 0;
+        height: 40%;
+    }
+
+
+    .container_info {
+        width: 95%;
+        border-radius: 0 0 20px 20px;
+    }
+
+
+    .container_info p:nth-child(2) {
+        font-size: 2rem;
+        margin: 0;
+        font-family: 'Playfair Display', serif;
+        width: 70%;
+        font-weight: bold;
+    }
+
+
+    .container_info p:nth-child(3) {
+        line-height: 1.3rem;
+        font-size: 1rem;
+    }
+
+    .prices {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 70%;
+        margin-bottom: 2.5rem;
+    }
+
+
+
+}
