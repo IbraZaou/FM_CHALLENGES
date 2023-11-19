@@ -1,0 +1,93 @@
+@import './variable.scss';
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import './answer.scss';
+
+
+
+body {
+    @include FlexCenter;
+    height: 100vh;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    background: #141519;
+
+    p {
+        color: lightgray;
+    }
+
+    .wrapper {
+        height: 400px;
+        width: 400px;
+        border-radius: 30px;
+        padding: 3rem;
+        @include Gradient;
+
+        h2 {
+            font-size: 1.7rem;
+        }
+
+        img {
+            padding: 1rem;
+            border-radius: 100%;
+            background-color: #3f474f;
+        }
+
+        .container_rating {
+            @include FlexCenterSpaceBetween;
+            padding: 0;
+            margin-top: 2rem;
+
+            button {
+                border: none;
+
+            }
+
+            button {
+                cursor: pointer;
+                font-size: 1rem;
+                color: lightgray;
+                list-style: none;
+                padding: 1.4rem 1.7rem;
+                border-radius: 100%;
+                transition: .3s;
+                background-color: #3f474f;
+
+            }
+
+            button:hover {
+                background-color: lightgray;
+                transition: .3s;
+                color: white;
+            }
+
+            button:focus {
+                background-color: #FC7613;
+            }
+        }
+
+        .submit {
+            width: 100%;
+            padding: 1rem 0;
+            border-radius: 30px;
+            border: none;
+            background-color: #FC7613;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: white;
+            margin-top: 2rem;
+            cursor: pointer;
+            transition: .3s;
+
+        }
+
+        .submit:hover {
+            background-color: white;
+            color: #FC7613;
+            transition: .3s;
+        }
+
+    }
+
+
+}

@@ -1,0 +1,26 @@
+@mixin FlexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin FlexCenterSpaceBetween {
+    @include FlexCenter;
+    justify-content: space-between !important;
+
+}
+
+@mixin FlexCenterSpaceAround {
+    @include FlexCenter;
+    justify-content: space-around !important;
+}
+
+@mixin FlexCenterColumn {
+    @include FlexCenter;
+    flex-direction: column;
+}
+
+@mixin Gradient {
+    background: rgb(62, 73, 93);
+    background: linear-gradient(180deg, rgba(62, 73, 93, 1) 0%, rgba(23, 30, 40, 1) 100%);
+}

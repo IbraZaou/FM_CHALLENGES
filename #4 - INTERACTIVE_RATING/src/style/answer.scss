@@ -1,0 +1,15 @@
+.wrapper_answer {
+    @include FlexCenterColumn;
+
+    .rating_result {
+        padding: .3rem 1rem;
+        border-radius: 30px;
+        color: #FC7613;
+        background-color: #3f474f;
+    }
+
+    p,
+    h2 {
+        text-align: center;
+    }
+}
