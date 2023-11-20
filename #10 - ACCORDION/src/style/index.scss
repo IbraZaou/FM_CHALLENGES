@@ -1,0 +1,119 @@
+@import './variable.scss';
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    @include FlexCenter;
+    background: rgb(175,104,234);
+    background: linear-gradient(180deg, rgba(175,104,234,1) 0%, rgba(101,99,232,1) 100%);
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+
+    hr {
+        border: solid lightgray 1px;
+        width: 100%;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+
+    span {
+        color: orangered;
+    }
+
+    p {
+        color: rgb(75, 75, 75);
+    }
+    
+    
+    .wrapper {
+        height: 500px;
+        width: 900px;
+        background-color: white;
+        border-radius: 30px;
+        @include FlexCenterSpaceBetween;
+        padding: 5rem;
+        z-index: 4;
+
+        .cube {
+            position: absolute;
+            left: 9rem;
+            top: 18rem;
+            z-index: 3;
+        }
+
+        .illu {
+            position: absolute;
+            left: 12rem;
+            top: 10rem;
+            z-index: 2;
+        }
+
+        .pattern {
+            width: 30%;
+            position: absolute;
+            z-index: 1;
+            top: 8rem;
+            left: 13rem;
+        }
+
+        .container_accordion {
+            width: 40%;
+        }
+    }
+
+
+    .accordion-header {
+        @include FlexCenterSpaceBetween;
+        cursor: pointer;
+
+    }
+
+
+    @media screen and (max-width: 412px) {
+            .wrapper {
+                width: 95%;
+                height: 750px;
+                margin-top: 5rem;
+        padding: 1rem;
+                @include FlexCenterColumn;
+    
+    
+                .cube {
+                    left: 2rem;
+                    width: 7rem;
+                    top: 7rem;
+                }
+        
+                .illu {
+                    position: absolute;
+                    left: 3rem;
+                    width: 20rem;
+                    top: 1rem;
+                    z-index: 2;
+                }
+        
+                .pattern {
+                    width: 30%;
+                    position: absolute;
+                    z-index: 1;
+                    top: 8rem;
+                    left: 13rem;
+                }
+
+                .container_accordion {
+                    width: 90%;
+                    margin: auto;
+
+                    h1 {
+                        text-align: center;
+                    }
+                }
+    
+            }
+        }
+        
+    } 
