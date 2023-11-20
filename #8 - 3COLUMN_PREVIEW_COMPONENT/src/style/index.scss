@@ -1,0 +1,75 @@
+@import './variable.scss';
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100vh;
+    @include FlexCenter;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+
+
+    .wrapper {
+        @include FlexCenter;
+        width: 60%;
+        margin: auto;
+
+        .sedan,
+        .suv,
+        .luxe {
+            height: 400px;
+            @include FlexCenterColumn;
+            align-items: flex-start;
+            justify-content: space-around;
+            padding: 2rem;
+
+            p {
+                line-height: 2rem;
+                color: lightgray;
+            }
+        }
+
+        .sedan {
+            background-color: #E28525;
+            border-radius: 5px 0 0 5px;
+
+            button {
+                color: #E28525;
+            }
+        }
+
+        .suv {
+            background-color: #016972;
+
+            button {
+                color: #016972;
+            }
+        }
+
+        .luxe {
+            background-color: #00403F;
+            border-radius: 0 5px 5px 0;
+
+            button {
+                color: #00403F;
+            }
+        }
+
+        button {
+            border: none;
+            padding: .7rem 2rem;
+            border-radius: 30px;
+        }
+    }
+}
+
+
+// Media Q
+
+@media screen and (max-width: 1040px) {
+    .wrapper {
+        @include FlexCenterColumn;
+    }
+}
