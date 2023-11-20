@@ -1,0 +1,81 @@
+@import './variable.scss';
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100vh;
+    overflow: hidden;
+    @include FlexCenter;
+    font-family: 'Roboto', sans-serif;
+    background: #19A1AD;
+
+    span {
+        color: gray;
+        margin-bottom: 2rem;
+    }
+
+    .wrapper {
+        height: 400px;
+        width: 350px;
+        margin: auto;
+        @include FlexCenterColumn;
+        justify-content: space-between;
+        border-radius: 20px;
+        background: white;
+
+        p {
+            font-size: 1.2rem;
+            margin: 0.3rem 0;
+        }
+
+        .bg_container {
+            position: absolute;
+            z-index: 1;
+            border-radius: 20px 20px 0 0;
+        }
+
+        .profile_pic {
+            border-radius: 100%;
+            z-index: 2;
+            margin-top: 6rem;
+            border: solid white 5px;
+        }
+
+        hr {
+            width: 99%;
+            border: solid lightgray 1px;
+        }
+
+        .container_stat {
+            @include FlexCenterSpaceBetween;
+            width: 75%;
+            margin-bottom: 2rem;
+
+            .bloc {
+                @include FlexCenterColumn;
+            }
+        }
+
+    }
+
+    .bg_top {
+        width: 100%;
+        margin: 0 -40%;
+    }
+
+    .bg_bot {
+        width: 100%;
+        margin: 0 40%;
+    }
+}
+
+
+// Media Q
+
+@media screen and (max-width: 1040px) {
+    .wrapper {
+        @include FlexCenterColumn;
+    }
+}
