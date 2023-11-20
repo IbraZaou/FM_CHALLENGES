@@ -1,0 +1,126 @@
+@import './variable.scss';
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    @include FlexCenter;
+    height: 100vh;
+    background-color: #0A0C1B;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+
+    .wrapper {
+        @include FlexCenter;
+        border-radius: 20px;
+        width: 1100px;
+        background-color: #1C1938;
+
+
+        img {
+          border-radius: 0px 20px 20px 0;
+        }
+
+        .container_info {
+          width: 40%;
+          margin: auto;
+
+          h2 {
+            font-size: 2.5rem;
+            
+            span {
+              color: #a95dd8;
+            }
+          }
+
+          p {
+            color: lightgray;
+            margin: 1.5rem auto;
+            font-size: 1.2rem;
+            line-height: 2rem;
+          }
+
+          .container_number {
+            @include FlexCenterSpaceBetween;
+            margin-top: 2rem;
+
+            h3 {
+              font-size: 1.7rem;
+              margin-bottom: 0;
+              
+            }
+
+            span {
+              text-transform: uppercase;
+              color: gray;
+            }
+          }
+        }
+
+    }
+}
+
+
+
+
+
+
+//Before and after for image with colored filter on it
+
+.image-container {
+    position: relative;
+    display: inline-block;
+    border-radius: 0px 20px 20px 0;
+  }
+  
+  .image-container::before,
+  .image-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 0px 20px 20px 0;
+
+  }
+  
+  .image-container::before {
+    background-color: #a95dd85f;
+    border-radius: 0px 20px 20px 0;
+
+  }
+
+
+
+  //Media Query
+
+  @media screen and (max-width: 428px) {
+    .wrapper {
+      width: 95%;
+      @include FlexCenterColumn;
+      flex-direction: column-reverse;
+
+      h2 {
+        text-align: center;
+        width: 80%;
+        margin: auto;
+        margin-top: 2rem;
+      }
+
+      p {
+        width: 70%;
+        text-align: center;
+        margin: auto;
+      }
+
+      .container_number {
+        @include FlexCenterColumn;
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+     
+    }
+  }
