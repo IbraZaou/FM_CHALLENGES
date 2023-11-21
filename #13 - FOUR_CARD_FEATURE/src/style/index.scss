@@ -1,0 +1,130 @@
+@import './variable.scss';
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@200;400;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    @include FlexCenter;
+    font-family: 'Barlow', sans-serif;
+
+
+    .container-text {
+        text-align: center;
+        margin: 4rem auto;
+
+
+        h2 {
+            margin: 0;
+            font-size: 4rem;
+        }
+
+        h2:nth-child(1) {
+            font-weight: lighter;
+        }
+
+        p {
+            font-size: 1.5rem;
+            width: 45%;
+            margin: 1rem auto;
+        }
+    }
+
+    .cards {
+        @include FlexCenter;
+
+        .card {
+            height: 300px;
+            width: 400px;
+            padding: 2rem;
+            @include FlexCenterColumn;
+            align-items: flex-start;
+            border-radius: 10px;
+            box-shadow: 0px 0px 30px lightgray;
+            margin: 1.7rem;
+
+            h2 {
+                font-size: 2rem;
+                margin: 0;
+            }
+
+            p {
+                width: 70%
+            }
+
+            .container-img {
+                @include FlexCenter;
+                align-items: flex-end;
+                justify-content: end;
+                width: 100%;
+                margin-top: 2rem;
+            }
+        }
+
+        .teambuilder {
+            border-top: solid 5px red;
+        }
+
+        .calculator {
+            border-top: solid 5px rgb(108, 152, 255)
+        }
+
+        .karma {
+            border-top: solid 5px orange;
+        }
+
+        .supervisor {
+            border-top: solid 5px #69DEDC;
+        }
+    }
+
+
+    @media screen and (max-width: 500px) {
+
+
+        .container-text {
+            h2 {
+                font-size: 2rem;
+            }
+
+            p {
+                width: 80%;
+            }
+        }
+
+        .cards {
+            @include FlexCenterColumn;
+
+            .card {
+                height: 300px;
+                width: 400px;
+                padding: 2rem;
+                @include FlexCenterColumn;
+                align-items: flex-start;
+                border-radius: 10px;
+                box-shadow: 0px 0px 30px lightgray;
+                margin: 1.7rem;
+
+                h2 {
+                    font-size: 2rem;
+                    margin: 0;
+                }
+
+                p {
+                    width: 70%;
+                    font-size: 1.5rem;
+                    color: rgb(169, 169, 169);
+                }
+
+                .container-img {
+                    @include FlexCenter;
+                    align-items: flex-end;
+                    justify-content: end;
+                    width: 100%;
+                    margin-top: 2rem;
+                }
+            }
+        }
+    }
+
+}
