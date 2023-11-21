@@ -1,0 +1,197 @@
+@import './variable.scss';
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    @include FlexCenter;
+    height: 100vh;
+    background-color: #EDF2F8;
+    font-family: 'Nunito', sans-serif;
+    color: #4D5561;
+
+
+    .wrapper {
+        background-color: white;
+        @include FlexCenterSpaceBetween;
+        border-radius: 20px;
+        width: 90%;
+        margin: auto;
+
+        .illu {
+            border-radius: 20px 0 0 20px;
+        }
+
+        .container-content {
+            padding: 2rem;
+            width: 40%;
+            margin: auto;
+
+            h2 {
+                font-size: 2.5rem;
+            }
+
+            p {
+                font-size: 1.5rem;
+            }
+
+
+            .container-profile {
+                @include FlexCenterSpaceBetween;
+
+
+                .container_pic_name {
+                    @include FlexCenter;
+
+                    .profile-pic {
+                        border-radius: 100%;
+                        width: 5rem;
+                        margin-right: 2rem
+                    }
+
+                    .name_date {
+                        @include FlexCenterColumn;
+                        align-items: flex-start;
+
+                        span:nth-child(1) {
+                            font-size: 1.1rem;
+                        }
+                    }
+                }
+
+                .share-btn {
+                    padding: 1rem;
+                    width: 1.3rem;
+                    border-radius: 100%;
+                    background-color: #EDF2F8;
+                    cursor: pointer;
+                }
+
+                .share-btn:hover {
+                    background-color: #49556B;
+                }
+
+                .share-btn:active {
+                    background-color: #49556B;
+                    color: white;
+                }
+
+
+            }
+        }
+
+        .container-media {
+            border: solid;
+            background: #49556B;
+            padding: 1rem 2rem;
+            border-radius: 10px;
+            width: 15%;
+            @include FlexCenterSpaceAround;
+            position: absolute;
+            left: 74%;
+            top: 55%;
+            box-shadow: 0px 10px 50px #49556b95;
+
+            button {
+                color: white;
+                background: none;
+                border: none;
+                letter-spacing: .5rem;
+                cursor: pointer;
+            }
+
+            .social {
+                cursor: pointer;
+                width: 1.3rem;
+                border: solid;
+            }
+        }
+    }
+
+
+}
+
+
+
+@media screen and (max-width:412px) {
+
+    body {
+        height: 100%;
+
+        .wrapper {
+            width: 95%;
+            @include FlexCenterColumn;
+            margin-top: 2rem;
+
+            .illu {
+                border-radius: 20px 20px 0 0;
+                width: 100%;
+            }
+
+            .container-content {
+                padding: 1;
+                width: 95%;
+
+                h2 {
+                    font-size: 1.3rem;
+                    width: 90%;
+                }
+
+                p {
+                    font-size: 1.1rem;
+                    width: 90%;
+                }
+
+                .container-profile {
+                    width: 90%;
+                    margin-top: 2rem;
+
+
+                    .container_pic_name {
+                        @include FlexCenter;
+
+                        .profile-pic {
+                            width: 3rem;
+                        }
+
+                    }
+
+                    .share-btn {
+                        width: 1rem;
+                    }
+                }
+            }
+
+            .container-media {
+                border: solid;
+                background: #49556B;
+                padding: 1rem 2rem;
+                border-radius: 10px;
+                width: 40%;
+                @include FlexCenterSpaceAround;
+                position: absolute;
+                left: 25%;
+                top: 60%;
+                box-shadow: 0px 10px 50px #49556b95;
+
+                button {
+                    color: white;
+                    background: none;
+                    border: none;
+                    letter-spacing: .5rem;
+                    cursor: pointer;
+                }
+
+                .social {
+                    cursor: pointer;
+                    width: 1.3rem;
+                    border: solid;
+                }
+            }
+
+
+        }
+    }
+
+}
