@@ -1,0 +1,155 @@
+@import './variable.scss';
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    @include FlexCenter;
+    // height: 100vh;
+    font-family: 'DM Sans', sans-serif;
+
+    #app {
+        width: 100%;
+
+        .wrapper {
+            width: 70%;
+            margin: auto;
+
+            .container-text {
+                @include FlexCenterSpaceBetween;
+
+                .container-info {
+                    h1 {
+                        color: #511F50;
+                        font-size: 3rem;
+                        width: 50%;
+                    }
+
+                    p {
+                        width: 55%;
+                        color: #511f5076
+                    }
+                }
+
+            }
+
+
+            .container-rating {
+
+                .bloc:nth-child(1) {
+                    margin-right: 10rem;
+                }
+
+                .bloc:nth-child(2) {
+                    margin-right: 5rem;
+                }
+
+                .bloc:nth-child(3) {
+                    margin-right: 0rem;
+                }
+
+                .bloc {
+                    @include FlexCenterSpaceAround;
+                    background-color: #F7F2F8;
+                    padding: 1rem 1rem;
+                    margin: 1rem auto;
+                    width: 500px;
+                    border-radius: 10px;
+                }
+            }
+
+            .container-review {
+                @include FlexCenterSpaceBetween;
+
+                .review-card:nth-child(2) {
+                    margin-top: 4rem;
+                }
+
+                .review-card:nth-child(3) {
+                    margin-top: 5rem;
+                }
+
+                .review-card {
+                    background-color: #511F50;
+                    color: white;
+                    border-radius: 10px;
+                    margin: auto 1rem;
+                    padding: 2rem;
+
+                    .container_profile {
+                        margin-bottom: 2rem;
+                        @include FlexCenterSpaceBetween;
+                        width: 50%;
+
+                        p {
+                            margin: 0;
+                        }
+
+                        span {
+                            color: #B9659D;
+                        }
+
+                    }
+
+                    img {
+                        width: 3rem;
+                        border-radius: 100%;
+                    }
+                }
+
+            }
+
+
+        }
+    }
+
+
+    @media screen and (max-width: 412px) {
+        .wrapper {
+            width: 100%;
+
+            .container-text {
+                @include FlexCenterColumn;
+
+                .container-info {
+                    h1 {
+                        text-align: center;
+                        width: 100% !important;
+                        margin: auto;
+                    }
+
+                    p {
+                        margin: auto;
+                        width: 100% !important;
+                        text-align: center;
+                    }
+                }
+
+                .container-rating {
+                    @include FlexCenterColumn;
+
+                    .bloc {
+                        margin: 1rem 0 !important;
+                        width: 100% !important;
+                        display: flex;
+                        flex-direction: column;
+                    }
+                }
+            }
+
+            .container-review {
+                @include FlexCenterColumn;
+                width: 100% !important;
+
+                .review-card {
+                    width: 100%;
+                    margin: .2rem 100% !important;
+
+                }
+            }
+
+        }
+    }
+
+}
