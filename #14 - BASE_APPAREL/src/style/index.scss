@@ -1,0 +1,170 @@
+@import './variable.scss';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    @include FlexCenter;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+
+
+    .wrapper {
+        @include FlexCenterSpaceBetween;
+        width: 85%;
+        margin: auto;
+
+        .wrapper-text {
+            @include FlexCenter;
+
+            .container-text {
+                width: 50%;
+                height: 40rem;
+                @include FlexCenterSpaceBetween;
+                flex-direction: column;
+                align-items: flex-start;
+
+                h1 {
+                    width: 30%;
+                    font-size: 5rem;
+                    letter-spacing: 1rem;
+                    line-height: 5rem;
+
+                    span {
+                        color: #D69D9E;
+                        font-weight: 100;
+                    }
+                }
+
+                p {
+                    font-size: 1.3rem;
+                    width: 100%;
+                    color: #D69D9E;
+                    margin: 0;
+                }
+
+                .error-message {
+                    width: 60%;
+                    margin: auto;
+                    @include FlexCenterSpaceBetween;
+                    color: #D69D9E;
+                    border: solid;
+                    padding: 1rem;
+                    border-radius: 30px;
+                    margin-top: 2rem;
+                }
+            }
+
+            form {
+
+                width: 100%;
+
+                .container-email {
+                    width: 100%;
+                    text-align: center;
+                    @include FlexCenter;
+
+                    input {
+                        padding: 1rem;
+                        width: 100%;
+                        border: solid 1px #D69D9E;
+                        border-radius: 30px 0 0 30px;
+                        border-right: none;
+                        outline: none;
+                        background: transparent;
+                        font-size: 1rem;
+                        color: #D69D9E;
+                    }
+
+                    button {
+                        padding: 1rem 3rem;
+                        border-radius: 30px;
+                        background: #D69D9E;
+                        border: none;
+                        cursor: pointer;
+                        box-shadow: 0px 10px 50px #F2DDDC;
+                        position: relative;
+                        right: 20px;
+                    }
+                }
+            }
+
+        }
+
+    }
+
+}
+
+@media screen and (max-width: 1400px) {
+    body {
+
+        h1 {
+            width: 30%;
+            font-size: 3rem !important;
+            letter-spacing: 1rem;
+            line-height: 3rem !important;
+
+            span {
+                color: #D69D9E;
+                font-weight: 100;
+            }
+        }
+
+        .container-img {
+            img {
+                width: 30rem;
+            }
+        }
+
+    }
+
+
+
+}
+
+
+
+
+@media screen and (max-width: 480px) {
+    body {
+        .wrapper {
+            @include FlexCenterColumn;
+            flex-direction: column-reverse;
+            width: 100%;
+
+            .wrapper-text {
+                width: 100%;
+
+
+                .container-text {
+                    width: 90%;
+                    @include FlexCenterSpaceAround;
+                    height: 100%;
+
+                    img {
+                        display: none;
+                    }
+
+                    h1 {
+                        text-align: center !important;
+                        width: 100% !important;
+                    }
+
+                    p {
+                        text-align: center;
+                        width: 90%;
+                    }
+                }
+
+                .container-email {
+                    margin-top: 5rem;
+
+                    button {
+                        padding: 2rem 3rem !important;
+                    }
+                }
+            }
+        }
+    }
+}
