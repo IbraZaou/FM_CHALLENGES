@@ -1,4 +1,5 @@
 @import './variable.scss';
+@import url('https://fonts.googleapis.com/css2?family=Afacad&display=swap');
 
 body {
     margin: 0;
@@ -6,5 +7,114 @@ body {
     box-sizing: border-box;
     @include FlexCenter;
     height: 100vh;
+    background: #FF7978;
+    background-image: url('../assets/images/bg-intro-desktop.png');
+    font-family: 'Afacad', sans-serif;
 
+
+    .wrapper {
+        @include FlexCenterSpaceBetween;
+        width: 70%;
+        margin: auto;
+
+        .container_info {
+            width: 40%;
+
+            h1 {
+                font-size: 3rem;
+                color: white;
+                line-height: 2.5rem;
+            }
+
+            p {
+                color: white;
+            }
+        }
+
+        .container_form {
+            p:nth-child(1) {
+                color: white;
+                padding: 1rem;
+                border-radius: 10px;
+                text-align: center;
+                background: #5D54A3;
+            }
+
+            form {
+                display: flex;
+                flex-direction: column;
+                padding: 1rem 2.5rem;
+                border-radius: 10px;
+                background: #fff;
+
+                input {
+                    margin: 1rem auto;
+                    width: 95%;
+                    padding: 1rem;
+                    border-radius: 5px;
+                    border: solid 1px lightgray;
+                }
+
+                input:focus {
+                    outline: solid 1px #5D54A3;
+
+                }
+
+                button {
+                    background-color: #37CC8A;
+                    border: none;
+                    padding: 1rem;
+                    border-radius: 10px;
+                    color: white;
+                    cursor: pointer;
+                    box-shadow: 0px 3px 1px #4DB287;
+                }
+
+                span {
+                    margin: 1rem auto;
+                    color: lightgray;
+
+                    a {
+                        color: #FF7978;
+                        font-weight: bolder;
+                        text-decoration: none;
+                    }
+                }
+            }
+
+        }
+
+    }
+
+}
+
+
+//Media Queries
+
+@media screen and (max-width: $laptop-width) {
+
+    body {
+
+        .wrapper {
+            width: 90%;
+        }
+    }
+}
+
+
+
+@media screen and (max-width: $tablet-width) {
+
+    body {
+
+        text-align: center;
+
+        .wrapper {
+            flex-direction: column;
+
+            .container_info {
+                width: 90%;
+            }
+        }
+    }
 }

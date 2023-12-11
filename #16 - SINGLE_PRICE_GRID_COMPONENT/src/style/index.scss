@@ -1,0 +1,141 @@
+@import './variable.scss';
+@import url('https://fonts.googleapis.com/css2?family=Afacad&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    @include FlexCenter;
+    height: 100vh;
+    background: #E6EFF6;
+    font-family: 'Afacad', sans-serif;
+
+    .wrapper {
+        box-shadow: 0px 0px 100px lightgray;
+        border-radius: 10px;
+
+        .container_join {
+            background-color: white;
+            width: 750px;
+            border-radius: 10px 10px 0 0;
+            padding: 2rem;
+            height: 200px;
+
+            p {
+                margin: 0;
+                color: lightgray;
+                font-weight: bolder;
+                font-size: 1.3rem;
+                width: 90%;
+            }
+
+            h1 {
+                color: #2BB3B1;
+            }
+
+            h2 {
+                color: #BFDF32;
+                margin-bottom: .4rem;
+            }
+        }
+
+        .wrapper_sub_why {
+            @include FlexCenter;
+            color: white;
+
+
+            .container_sub {
+                background: #2BB3B1;
+                width: 343px;
+                height: 250px;
+                padding: 2rem;
+                border-radius: 0 0 0 10px;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+
+                p {
+                    margin: 0;
+                    font-size: 1.5rem;
+                    font-weight: bold;
+                }
+
+                h3 {
+                    margin: 0;
+                    font-size: 3rem;
+
+                    span {
+                        font-size: 1rem;
+                        font-weight: lighter;
+                        opacity: .6;
+                    }
+                }
+
+                button {
+                    background-color: #BFDF32;
+                    border: none;
+                    width: 90%;
+                    margin: 3rem auto;
+                    padding: 1rem;
+                    box-shadow: 0px 0px 20px gray;
+                    color: white;
+                    font-size: 1.2rem;
+                    border-radius: 5px;
+                }
+            }
+
+            .container_why {
+                background: #4ABEBD;
+                width: 343px;
+                height: 250px;
+                padding: 2rem;
+                border-radius: 0 0 10px 0;
+
+                h3 {
+                    font-size: 2rem;
+                    margin: 0;
+                }
+
+                ul {
+                    padding: 0;
+
+                    li {
+                        list-style: none;
+                        font-size: 1.2rem;
+                        opacity: .7;
+                    }
+                }
+
+
+            }
+        }
+    }
+
+}
+
+
+//media query
+
+@media screen and (max-width: $tablet-width) {
+
+    body {
+        .container_join {
+            width: 343px !important;
+            height: 300px !important;
+        }
+
+        .wrapper_sub_why {
+            flex-direction: column;
+
+            .container_sub {
+                border-radius: 0px !important;
+            }
+
+            .container_why {
+                border-radius: 0 0 10px 10px !important;
+            }
+        }
+    }
+
+}

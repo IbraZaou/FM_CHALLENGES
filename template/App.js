@@ -1,83 +1,25 @@
-import React, { useState } from 'react';
-import CUBE from './assets/images/illustration-box-desktop.svg';
-import ILL from './assets/images/illustration-woman-online-desktop.svg';
-import PATTERN from './assets/images/bg-pattern-desktop.svg';
+import React from 'react';
 
-const Accordion = ({ title, content }) => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleAccordion = () => {
-    setIsOpen(!isOpen);
-  };
+const App = () => {
   return (
-    <div className="accordion">
-    <div className="accordion-header" onClick={toggleAccordion}>
-      <h2>{title}</h2>
-      <span>{isOpen ? '▲' : '▼'}</span>
-    </div>
-    {isOpen && (
-      <div className="accordion-content">
-        <p>{content}</p>
+    <div className='wrapper'>
+      <div className="container_info">
+        <h1><strong>Learn to code by watching others</strong></h1>
+        <p>See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but understanding how developers think is invaluable.</p>
       </div>
-    )}
-    <hr />
-  </div>
-);
-};
-
-function App() {
-
-  const accordionItems = [
-    {
-      title: 'How many teams members can I invite?',
-      content: 'Answer',
-    },
-    {
-      title: 'What is the maximum file upload size?',
-      content: 'No more than 2GB. All files in your account must fit your alloted storage.',
-    },
-    {
-      title: 'How do i reset my password?',
-      content: 'Answer',
-    },
-    {
-      title: 'How do i reset my password?',
-      content: 'Answer',
-    },
-    {
-      title: 'Can i cancel my subscription?',
-      content: 'Answer',
-    },
-    {
-      title: 'Do you provide additional support?',
-      content: 'Answer',
-    },
-    
-  ];
-
-  return (
-    <div className="App">
-
-    <div className="wrapper">
-
-    <div className="container_images">
-      <img className='cube' src={CUBE} alt="" />
-      <img className='illu' src={ILL} alt="" />
-      <img className='pattern' src={PATTERN} alt="" />
-    </div>
-
-  <div className="container_accordion">
-
-    <h1>FAQ</h1>
-    {accordionItems.map((item, index) => (
-            <Accordion key={index} title={item.title} content={item.content} />
-          ))}
-  </div>
-
-    </div>
-
+      <div className="container_form">
+        <p><strong>Try it free 7 days</strong> then $20/mo. thereafter</p>
+        <form action="">
+          <input type="text" placeholder='First Name' required />
+          <input type="text" placeholder='Last Name' required />
+          <input type="email" placeholder='Email Address' required />
+          <input type="password" placeholder='Password' required />
+          <button type="submit">CLAIM YOUR FREE TRIAL</button>
+          <span>By clicking the button you are agreeing to our <a href='#'>Terms and Services</a></span>
+        </form>
+      </div>
     </div>
   );
-}
+};
 
 export default App;
