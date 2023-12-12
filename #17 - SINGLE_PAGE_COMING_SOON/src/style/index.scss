@@ -1,0 +1,185 @@
+@import './variable.scss';
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    @include FlexCenter;
+    font-family: 'Open Sans', sans-serif;
+    height: 120vh;
+
+    .wrapper {
+        @include FlexCenter;
+        flex-direction: column;
+
+        .logo {
+            width: 7rem;
+        }
+
+        h2 {
+            font-size: 3.5rem;
+            margin-bottom: 0;
+            font-weight: lighter;
+            color: gray;
+
+            span {
+                font-weight: bold;
+                color: black;
+            }
+        }
+
+        p {
+            font-size: 1.7rem;
+            margin-top: 1%;
+        }
+
+        form {
+            width: 100%;
+            @include FlexCenter;
+            flex-direction: column;
+
+            .container_email {
+                width: 65%;
+                @include FlexCenterSpaceBetween;
+                margin-top: 2rem;
+                margin-bottom: 5rem;
+
+
+                input {
+                    border-radius: 50px;
+                    padding: 1.4rem;
+                    width: 60%;
+                    border: solid 1px #4D7BF3;
+                    font-size: 1.2rem;
+                    color: #4D7BF3;
+                }
+
+                input::placeholder {
+                    color: #4D7BF3;
+                    font-size: 1.2rem;
+                }
+
+                button {
+                    border-radius: 50px;
+                    padding: 1.4rem;
+                    width: 32%;
+                    color: white;
+                    background: #4D7BF3;
+                    border: none;
+                    font-size: 1.2rem;
+                    cursor: pointer;
+                    box-shadow: #4d7cf36d 0px 10px 20px;
+                }
+
+                button:hover {
+                    bottom: .5rem;
+                    position: relative;
+                }
+            }
+
+            .error-message {
+                color: white;
+                background-color: red;
+                padding: 1rem;
+                border-radius: 50px;
+                font-size: 1rem;
+                margin: 0;
+                cursor: pointer;
+                transition: .5s;
+
+            }
+
+            .error-message:hover {
+                box-shadow: 0px 0px 20px rgba(255, 0, 0, 0.317);
+                transition: .5s;
+            }
+        }
+
+
+
+        .illu {
+            width: 70%;
+        }
+
+        .container_social {
+            width: 10%;
+            margin-top: 3rem;
+            @include FlexCenterSpaceBetween;
+
+            img {
+                border: solid lightgray 1px;
+                border-radius: 100%;
+                width: 1.2rem;
+                padding: .5rem;
+            }
+        }
+
+    }
+}
+
+//Media Q
+
+
+@media screen and (max-width: $tablet-width) {
+    body {
+        .container_email {
+            flex-direction: column;
+
+            input {
+                width: 90% !important;
+            }
+
+            button {
+                width: 100% !important;
+                margin-top: 1rem;
+            }
+        }
+
+        .container_social {
+            width: 20% !important;
+
+            img {
+                width: 1.5rem !important;
+            }
+        }
+    }
+}
+
+
+
+@media screen and (max-width: $mobile-width) {
+    body {
+
+        h2 {
+            font-size: 2rem !important;
+        }
+
+        p {
+            font-size: 1rem !important;
+        }
+
+        .container_email {
+            flex-direction: column;
+
+            input {
+                width: 90% !important;
+                font-size: 1rem !important;
+            }
+
+            button {
+                width: 100% !important;
+                margin-top: 1rem;
+                font-size: 1rem !important;
+            }
+        }
+
+        .container_social {
+            width: 40% !important;
+
+            img {
+                width: 1.5rem !important;
+            }
+        }
+    }
+}
